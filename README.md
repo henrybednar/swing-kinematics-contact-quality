@@ -9,13 +9,13 @@ Bat speed is the dominant predictor of both outcomes, but swing path tilt and at
 ## Contents
 
 - **`writeup.pdf`** — full write-up: methodology, results, and discussion.
-- **`swing_kinematics_model.py`** — fits both regressions: standardizes the six kinematics, adds year as a categorical covariate, runs HC3-robust OLS for each outcome, prints the standardized coefficients/R²/F-stats, and plots a standardized-coefficient comparison (Figure 1).
-- **`requirements.txt`** — `pandas`, `statsmodels`, `matplotlib`.
+- **`swing_kinematics_model.py`** — the full analysis: descriptive stats, Pearson correlations, two HC3-robust OLS regressions (standardized six kinematics + year covariate) for exit velocity and xwOBAcon, a diagnostics suite (VIF, condition number, Shapiro-Wilk residual normality, Breusch-Pagan heteroscedasticity, Cook's D influential-observation checks, repeated-measures structure), and four figures (bat speed vs. exit velocity scatter, per-model standardized-coefficient bar charts, and a side-by-side comparison).
+- **`requirements.txt`** — `pandas`, `scipy`, `statsmodels`, `matplotlib`.
 
 ## Data
 
-Baseball Savant's [Bat Tracking leaderboard](https://baseballsavant.mlb.com/leaderboard/bat-tracking), filtered to qualified batters, pulled separately for the 2023, 2024, and 2025 seasons and stacked into one 408-row player-season table. Not included in this repo — see the script's docstring for the exact columns expected.
+Baseball Savant's [Bat Tracking leaderboard](https://baseballsavant.mlb.com/leaderboard/bat-tracking), filtered to qualified batters, pulled separately for the 2023, 2024, and 2025 seasons and stacked into one 408-row player-season table (expected as `Swing_Metrics_2023-2025.csv`). Not included in this repo.
 
 ## Tech stack
 
-Python, `pandas`, `statsmodels`, `matplotlib`.
+Python, `pandas`, `scipy`, `statsmodels`, `matplotlib`.
