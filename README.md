@@ -9,7 +9,13 @@ Bat speed is the dominant predictor of both outcomes, but swing path tilt and at
 ## Contents
 
 - **`writeup.pdf`** — full write-up: methodology, results, and discussion.
+- **`swing_kinematics_model.py`** — fits both regressions: standardizes the six kinematics, adds year as a categorical covariate, runs HC3-robust OLS for each outcome, prints the standardized coefficients/R²/F-stats, and plots a standardized-coefficient comparison (Figure 1).
+- **`requirements.txt`** — `pandas`, `statsmodels`, `matplotlib`.
 
-## Status
+## Data
 
-Analysis code to follow.
+Baseball Savant's [Bat Tracking leaderboard](https://baseballsavant.mlb.com/leaderboard/bat-tracking), filtered to qualified batters, pulled separately for the 2023, 2024, and 2025 seasons and stacked into one 408-row player-season table. Not included in this repo — see the script's docstring for the exact columns expected.
+
+## Tech stack
+
+Python, `pandas`, `statsmodels`, `matplotlib`.
