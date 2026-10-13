@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+# Savant data is downloaded by get_data.py, not redistributed.
+# Its .meta.json (pull date) is committed so the report's provenance line can be checked.
+Swing_Metrics_2023-2025.csv
